@@ -57,17 +57,10 @@
   border-radius: 1rem;
   gap: 1rem;
 }
-.home label {
-  display: block;
-  color: var(--text-color);
-  padding-bottom: 1rem;
-  font-size: 13px;
-  font-weight: 500;
-}
-.home .label_total {
+.home .cardDiv .label_total {
   justify-content: space-between;
 }
-.home .label_total .total {
+.home .cardDiv .label_total .total {
   color: var(--text-color);
   font-size: 18px;
   padding-bottom: 1rem;
@@ -86,9 +79,54 @@
   font-size: 13px;
   font-weight: 500;
 }
+.home .input input[type=range], .home .input input[type=date], .home .input input[type=date]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
 .home .input input::-moz-placeholder {
   font-size: 13px;
 }
 .home .input input::placeholder {
   font-size: 13px;
+}
+.home .input .icon {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-left: 10px;
+}
+.home .searchOptions {
+  position: absolute;
+  background: var(--gradient-color);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -0.7rem;
+  left: 50%;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.home .searchOptions:hover {
+  background: var(--primary-color);
+}
+.home .searchOptions .icon {
+  font-size: 22px;
+}
+.home .searchOptions p {
+  font-size: 13px;
+}
+.home .homeFooterIcons {
+  width: 100%;
+  justify-content: space-between;
+}
+.home .homeFooterIcons .icon {
+  font-size: 24px;
+  margin: 0 0.5rem;
+  color: var(--white-color);
+  font-weight: 600;
+}
+.home .homeFooterIcons .icon:hover {
+  color: var(--primary-color);
 }/*# sourceMappingURL=home.css.map */

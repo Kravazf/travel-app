@@ -60,23 +60,15 @@
     background: var(--white-color);
     border-radius: 1rem;
     gap: 1rem;
-  }
 
-  label {
-    display: block;
-    color: var(--text-color);
-    padding-bottom: 1rem;
-    font-size: 13px;
-    font-weight: 500;
-  }
-
-  .label_total {
-    justify-content: space-between;
-    
-    .total {
-      color: var(--text-color);
-      font-size: 18px;
-      padding-bottom: 1rem;
+    .label_total {
+      justify-content: space-between;
+      
+      .total {
+        color: var(--text-color);
+        font-size: 18px;
+        padding-bottom: 1rem;
+      }
     }
   }
 
@@ -93,9 +85,63 @@
       width: 100%;
       font-size: 13px;
       font-weight: 500;
+      
+      &[type="range"],
+      &[type="date"],
+      &[type="date"]::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+      }
 
       &::placeholder {
         font-size: 13px;
+      }
+    }
+
+    .icon {
+      font-size: 22px;
+      color: var(--primary-color);
+      margin-left: 10px;
+    }
+  }
+
+  .searchOptions {
+    position: absolute;
+    background: var(--gradient-color);
+    width: max-content;
+    bottom: -0.7rem;
+    left: 50%;
+    column-gap: .8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--primary-color);
+    }
+
+    .icon {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .homeFooterIcons {
+    width: 100%;
+    justify-content: space-between;
+
+    .icon {
+      font-size: 24px;
+      margin: 0 .5rem;
+      color: var(--white-color);
+      font-weight: 600;
+
+      &:hover {
+        color: var(--primary-color);
       }
     }
   }
