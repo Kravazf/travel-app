@@ -1,0 +1,91 @@
+.header {
+  position: fixed;
+  justify-content: space-between;
+  background: var(--white-color-deam);
+  width: 100%;
+  padding: 1rem;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+
+  .logo {
+    color: var(--black-color);
+    font-weight: 600;
+
+    .icon {
+      font-size: 25px;
+      color: var(--primary-color);
+      transform: translateY(5px);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .navBar {
+      position: absolute;
+      background: var(--white-color-deam);
+      height: max-content;
+      width: 80%;
+      border-radius: 1rem;
+      top: -500rem;
+      left: 50%;
+      padding: 1.5rem;
+      transform: translate(-50%);
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+      transition: .5s ease-in-out;
+
+      .navLists {
+        flex-direction: column;
+        padding: .5rem 0;
+
+        .navItem {
+          padding: .5rem 0;
+        }
+
+        .navLink {
+          color: var(--text-color);
+          font-size: 0.9rem;
+          font-weight: 600;
+
+          &:hover {
+            color: var(--text-color);
+          }
+        }
+      }
+
+      .btn {
+        margin-top: 1rem;
+
+        a {
+          font-weight: 600;
+          color: var(--white-color);
+        }
+      }
+    }
+
+    .closeNavbar {
+      position: absolute;
+      top: 0.8rem;
+      right: 0.8rem;
+      color: var(--primary-color);
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+    .toggleNavbar {
+
+      .icon {
+        font-size: 25px;
+        color: var(--primary-color);
+        
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+    }
+
+    .activeNavbar {
+      top: 7rem
+    }
+  }
+}

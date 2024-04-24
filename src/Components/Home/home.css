@@ -1,0 +1,94 @@
+.home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  margin: auto;
+}
+.home .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(47, 106, 127);
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+}
+.home video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home .homeContent {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  color: var(--white-color);
+  z-index: 100;
+}
+.home .homeContent .textDiv {
+  padding: 2rem 0;
+}
+.home .homeContent .textDiv .smallText {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.home .homeContent .textDiv .homeTitle {
+  position: relative;
+  font-size: 1.8rem;
+}
+.home .cardDiv {
+  position: relative;
+  padding: 2rem 1rem;
+  background: var(--white-color);
+  border-radius: 1rem;
+  gap: 1rem;
+}
+.home label {
+  display: block;
+  color: var(--text-color);
+  padding-bottom: 1rem;
+  font-size: 13px;
+  font-weight: 500;
+}
+.home .label_total {
+  justify-content: space-between;
+}
+.home .label_total .total {
+  color: var(--text-color);
+  font-size: 18px;
+  padding-bottom: 1rem;
+}
+.home .input {
+  height: 40px;
+  padding: 0 1rem;
+  background: var(--input-color);
+  border-radius: 2rem;
+}
+.home .input input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+}
+.home .input input::-moz-placeholder {
+  font-size: 13px;
+}
+.home .input input::placeholder {
+  font-size: 13px;
+}/*# sourceMappingURL=home.css.map */
