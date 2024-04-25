@@ -15,10 +15,11 @@
   --black-color: hsl(201, 33%, 16%);
   --text-color: hsl(240, 4%, 36%);
   --white-color-deam: hsl(0, 0%, 93%);
-  --grey-text: rgba(190, 190, 190);
-  --input-color: rgba(239, 239, 239);
-  --body-color: rgba(240, 240, 246);
-  --card-BG: rgba(225, 225, 235);
+  --grey-text: rgb(190, 190, 190);
+  --input-color: rgb(239, 239, 239);
+  --body-color: rgb(240, 240, 246);
+  --card-BG: rgb(225, 225, 235);
+  --card-hover: rgb(255, 255, 255);
 }
 
 a {
