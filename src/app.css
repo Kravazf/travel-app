@@ -22,6 +22,10 @@
   --card-hover: rgb(255, 255, 255);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }

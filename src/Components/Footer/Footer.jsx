@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
 
       <div className='secContent flex container'>
-        <div data-aos='fade-up' className='contactDiv flex'>
+        <div data-aos='fade-right' className='contactDiv flex'>
           <div className='text'>
             <small>
               KEEP IN TOUCH
@@ -30,8 +30,8 @@ const Footer = () => {
             </h2>
           </div>
           <div className='inputDiv flex'>
-            <input type='email' placeholder='Enter Email Address'/>
-            <button className='btn flex' type='submit'>
+            <input data-aos='fade-up' type='email' placeholder='Enter Email Address'/>
+            <button data-aos='fade-up' className='btn flex' type='submit'>
               SEND <FiSend className='icon'/>
             </button>
           </div>
@@ -43,10 +43,10 @@ const Footer = () => {
                 <MdOutlineTravelExplore className='icon'/>  Travel.
               </a>
             </div>
-            <div className='footerParagraph'>
+            <div data-aos='fade-up' className='footerParagraph'>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores fugiat quod, earum repudiandae illo, impedit minus ipsam incidunt unde possimus est odit iure. Nemo sint ipsam, sunt suscipit ipsa iusto.
             </div>
-            <div className='footerSocials flex'>
+            <div data-aos='fade-up' className='footerSocials flex'>
               <AiOutlineTwitter className='icon'/>
               <AiFillYoutube className='icon'/>
               <AiOutlineInstagram className='icon'/>
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='footerLinks grid'>
-            <div className='linkGroup'>
+            <div data-aos='fade-up' data-aos-duration='2500' className='linkGroup'>
               <span className='groupTitle'>
                 OUR AGENCY
               </span>
@@ -74,7 +74,7 @@ const Footer = () => {
                 <FiChevronRight className='icon'/> Payment
               </li>
             </div>
-            <div className='linkGroup'>
+            <div data-aos='fade-up' data-aos-duration='3500' className='linkGroup'>
               <span className='groupTitle'>
                 PARTNERS
               </span>
@@ -94,7 +94,7 @@ const Footer = () => {
                 <FiChevronRight className='icon'/> TripAdvisor
               </li>
             </div>
-            <div className='linkGroup'>
+            <div data-aos='fade-up' data-aos-duration='4500' className='linkGroup'>
               <span className='groupTitle'>
                 LAST MINUTE
               </span>
