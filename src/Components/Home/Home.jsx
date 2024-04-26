@@ -7,23 +7,30 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 import { FaTripadvisor } from 'react-icons/fa';
 import { BsListTask } from 'react-icons/bs';
 import { TbApps } from 'react-icons/tb';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Home = () => {
-  return ( 
+  useEffect(() => {
+    AOS.init({duration: 1500})
+  }, []);
+
+  return (
     <section className='home'>
       <div className='overlay'>
       </div>
       <video src={video} muted autoPlay loop type='video/mp4'></video>
       <div className='homeContent container'>
         <div className='textDiv'>
-          <p className='smallText'>
+          <p data-aos='fade-up' className='smallText'>
             Our Packages
           </p>
-          <h1 className='homeTitle'>
+          <h1 data-aos='fade-up' className='homeTitle'>
             Search your Holiday
           </h1>
         </div>
-        <div className='cardDiv grid'>
+        <div data-aos='fade-up' className='cardDiv grid'>
           <div className='destinationInput'>
             <label htmlFor='city'>
               Search your destination:
@@ -58,7 +65,7 @@ const Home = () => {
             <p>MORE FILTERS</p>
           </div>
         </div>
-        <div className="homeFooterIcons flex">
+        <div data-aos='fade-up' className="homeFooterIcons flex">
           <div className='rightIcons'>
             <FiFacebook className='icon'/>
             <AiOutlineInstagram className='icon'/>

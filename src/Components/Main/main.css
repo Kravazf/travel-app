@@ -1,5 +1,6 @@
 .main {
   width: 100%;
+  margin: 2rem 0;
 }
 .main .secTitle .title {
   position: relative;

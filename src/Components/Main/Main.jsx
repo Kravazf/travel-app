@@ -1,8 +1,15 @@
 import './main.css';
 import data from './data.js'
 import { HiOutlineClipboardCheck, HiOutlineLocationMarker } from 'react-icons/hi';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Main = () => {
+  useEffect(() => {
+    AOS.init({duration: 1700})
+  }, []);
+
   return ( 
     <section className='main container section'>
       <div className="secTitle">
@@ -14,7 +21,7 @@ const Main = () => {
         {
           data.map((item) => {
             return (
-              <div key={item.id} className="singleDestination">
+              <div data-aos='fade-up' key={item.id} className="singleDestination">
                 <div className='imageDiv'>
                   <img src={item.ImgSrc} alt={item.destTitle} />
                 </div>
