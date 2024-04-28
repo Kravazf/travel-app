@@ -26,13 +26,13 @@
   .secContent {
     justify-content: center;
     gap: 1.5rem;
+    position: relative;
 
     .singleDestination {
       height: 100%;
       display: grid;
       row-gap: 10px;
       border-radius: 10px;
-      align-items: center;
       background: var(--card-BG);
       box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
       overflow: hidden;
@@ -137,5 +137,43 @@
         }
       }
     }
+
+    .noOffersMessage {
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}
+
+@media  screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+
+    &::after {
+      width: 155px !important;
+    }
+  }
+
+  .secContent {
+    grid-template-columns: repeat(2, 1fr);
+
+    .singleDestination {
+      height: auto;
+    }
+  }
+
+  .noOffersMessage {
+    position: relative;
+    left: 50%;
+  }
+}
+
+@media  screen and (min-width: 840px) {
+  .secContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .noOffersMessage {
+    left: 100%;
   }
 }

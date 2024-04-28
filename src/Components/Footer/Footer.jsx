@@ -6,12 +6,19 @@ import { AiFillYoutube, AiOutlineInstagram, AiOutlineTwitter } from 'react-icons
 import { FaTripadvisor } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
   useEffect(() => {
-    AOS.init({duration: 1700})
+    AOS.init({ duration: 1700 });
   }, []);
+
+  const handleSendButtonClick = () => {
+    // Очищення поля вводу email
+    setEmail('');
+  };
 
   return ( 
     <section className='footer flex'>
@@ -30,8 +37,21 @@ const Footer = () => {
             </h2>
           </div>
           <div className='inputDiv flex'>
-            <input data-aos='fade-up' type='email' placeholder='Enter Email Address'/>
-            <button data-aos='fade-up' className='btn flex' type='submit'>
+            <input
+              id='email'
+              data-aos='fade-up'
+              type='email'
+              autoComplete='email'
+              placeholder='Enter Email Address'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              />
+            <button
+              data-aos='fade-up'
+              className='btn flex'
+              type='submit'
+              onClick={handleSendButtonClick}
+              >
               SEND <FiSend className='icon'/>
             </button>
           </div>
@@ -39,7 +59,7 @@ const Footer = () => {
         <div className='footerCard flex'>
           <div className='footerIntro flex'>
             <div className='logoDiv'>
-              <a href='#' className='logo flex'>
+              <a href='/' className='logo flex'>
                 <MdOutlineTravelExplore className='icon'/>  Travel.
               </a>
             </div>
@@ -47,10 +67,10 @@ const Footer = () => {
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores fugiat quod, earum repudiandae illo, impedit minus ipsam incidunt unde possimus est odit iure. Nemo sint ipsam, sunt suscipit ipsa iusto.
             </div>
             <div data-aos='fade-up' className='footerSocials flex'>
-              <AiOutlineTwitter className='icon'/>
-              <AiFillYoutube className='icon'/>
-              <AiOutlineInstagram className='icon'/>
-              <FaTripadvisor className='icon'/>
+              <a href="/"><AiOutlineTwitter className='icon'/></a>
+              <a href="/"><AiFillYoutube className='icon'/></a>
+              <a href="/"><AiOutlineInstagram className='icon'/></a>
+              <a href="/"><FaTripadvisor className='icon'/></a>
             </div>
           </div>
           <div className='footerLinks grid'>
@@ -59,19 +79,19 @@ const Footer = () => {
                 OUR AGENCY
               </span>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Services
+                <FiChevronRight className='icon'/> <a href='/'>Services</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Insurance
+                <FiChevronRight className='icon'/> <a href='/'>Insurance</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Agency
+                <FiChevronRight className='icon'/> <a href='/'>Agency</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Tourism
+                <FiChevronRight className='icon'/> <a href='/'>Tourism</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Payment
+                <FiChevronRight className='icon'/> <a href='/'>Payment</a>
               </li>
             </div>
             <div data-aos='fade-up' data-aos-duration='3500' className='linkGroup'>
@@ -79,19 +99,19 @@ const Footer = () => {
                 PARTNERS
               </span>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Bookings
+                <FiChevronRight className='icon'/><a href='/'>Bookings</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Rentcars
+                <FiChevronRight className='icon'/> <a href='/'>Rentcars</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> HostelWorld
+                <FiChevronRight className='icon'/> <a href='/'>HostelWorld</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Trivago
+                <FiChevronRight className='icon'/> <a href='/'>Trivago</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> TripAdvisor
+                <FiChevronRight className='icon'/> <a href='/'>TripAdvisor</a>
               </li>
             </div>
             <div data-aos='fade-up' data-aos-duration='4500' className='linkGroup'>
@@ -99,19 +119,19 @@ const Footer = () => {
                 LAST MINUTE
               </span>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> London
+                <FiChevronRight className='icon'/> <a href='/'>London</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> California
+                <FiChevronRight className='icon'/> <a href='/'>California</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Indonesia
+                <FiChevronRight className='icon'/> <a href='/'>Indonesia</a>
               </li>
               <li className='footerList flex'>
-                <FiChevronRight className='icon'/> Europe
+                <FiChevronRight className='icon'/> <a href='/'>Europe</a>
               </li>
               <li className='footerList flex'>
-                 <FiChevronRight className='icon'/> Oceania
+                 <FiChevronRight className='icon'/> <a href='/'>Oceania</a>
               </li>
             </div>
           </div>

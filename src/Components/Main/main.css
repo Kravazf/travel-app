@@ -23,13 +23,13 @@
 .main .secContent {
   justify-content: center;
   gap: 1.5rem;
+  position: relative;
 }
 .main .secContent .singleDestination {
   height: 100%;
   display: grid;
   row-gap: 10px;
   border-radius: 10px;
-  align-items: center;
   background: var(--card-BG);
   box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
   overflow: hidden;
@@ -116,4 +116,35 @@
 .main .secContent .singleDestination .cardInfo .btn .icon {
   align-items: center;
   font-size: 18px;
+}
+.main .secContent .noOffersMessage {
+  font-weight: 600;
+  text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .title::after {
+    width: 155px !important;
+  }
+  .secContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .secContent .singleDestination {
+    height: auto;
+  }
+  .noOffersMessage {
+    position: relative;
+    left: 50%;
+  }
+}
+@media screen and (min-width: 840px) {
+  .secContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .noOffersMessage {
+    left: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

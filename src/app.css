@@ -34,6 +34,11 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  color: var(--white-color);
+}
+
 .section {
   padding: 4rem 0 2rem;
 }
@@ -87,4 +92,21 @@ input {
 
 body {
   background-color: var(--body-color);
+}
+
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 88% !important;
+    margin: 0 auto !important;
+  }
+
+  .section {
+    padding: 6rem 0 4rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
 }

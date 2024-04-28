@@ -60,14 +60,22 @@
     background: var(--white-color);
     border-radius: 1rem;
     gap: 1rem;
+    color: var(--text-color);
+
+    label {
+      display: inline-block;
+      padding-bottom: 0.2rem;
+    }
 
     .label_total {
+      align-items: center;
+      text-align: center;
       justify-content: space-between;
+      color: var(--text-color);
       
       .total {
         color: var(--text-color);
         font-size: 18px;
-        padding-bottom: 1rem;
       }
     }
   }
@@ -146,3 +154,73 @@
     }
   }
 }
+
+@media screen and (min-width: 500px) {
+  .home{
+    .homeContent {
+      .textDiv {
+        .smallText {
+          font-size: 16px;
+        }
+
+        .homeTitle {
+          position: relative;
+          font-size: 2.3rem;
+          width: max-content;
+
+          &::after {
+            position: absolute;
+            content: '';
+            background: var(--secondary-color);
+            height: 5px;
+            width: 145px;
+            right: 0px;
+            bottom: 5px;
+            z-index: -1;
+          }
+        }
+      }
+
+      .cardDiv {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 710px) {
+  .home {
+    .homeContent {
+      .cardDiv {
+        padding: 2rem 1rem;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .home {
+    height: 85vh;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .home {
+    height: 95vh;
+
+    .cardDiv {
+      padding: 2rem 1rem;
+      grid-template-columns: repeat(3, 1fr);
+
+      .input {
+        margin-bottom: 1rem;
+      }
+
+      .searchOptions {
+        bottom: -1rem;
+        padding: 8px 1rem;
+      }
+    }
+  }
+} 

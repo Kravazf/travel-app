@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import video from '../../Assets/video3.mp4';
 import { GrLocation } from 'react-icons/gr';
@@ -9,17 +10,31 @@ import { BsListTask } from 'react-icons/bs';
 import { TbApps } from 'react-icons/tb';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 
-const Home = () => {
+const Home = ({ onPriceFilter }) => {
+  const [price, setPrice] = useState(400);
+  const [destination, setDestination] = useState('');
+  
   useEffect(() => {
-    AOS.init({duration: 1500})
+    AOS.init({ duration: 1500 });
   }, []);
+
+  const handlePriceChange = (event) => {
+    const newPrice = parseInt(event.target.value);
+    setPrice(newPrice);
+  };
+
+  const handleDestinationChange = (event) => {
+    setDestination(event.target.value); // Оновлюємо стан при зміні значення
+  };
+
+  const handleFilterClick = () => {
+    onPriceFilter(price, destination); 
+  };
 
   return (
     <section className='home'>
-      <div className='overlay'>
-      </div>
+      <div className='overlay'></div>
       <video src={video} muted autoPlay loop type='video/mp4'></video>
       <div className='homeContent container'>
         <div className='textDiv'>
@@ -32,53 +47,66 @@ const Home = () => {
         </div>
         <div data-aos='fade-up' className='cardDiv grid'>
           <div className='destinationInput'>
-            <label htmlFor='city'>
-              Search your destination:
-            </label>
+            <label htmlFor='city'>Search your destination:</label>
             <div className='input flex'>
-              <input type='text' placeholder='Enter name here...' />
-              <GrLocation className='icon'/>
+              <input 
+                id='city' 
+                name='city' 
+                type='text' 
+                placeholder='Enter name here...' 
+                value={destination}
+                onChange={handleDestinationChange}
+              />
+              <GrLocation className='icon' />
             </div>
           </div>
           <div className='dateInput'>
-            <label htmlFor='date'>
-              Select your date:
-            </label>
+            <label htmlFor='date'>Select your date:</label>
             <div className='input flex'>
-              <input type='date'/>
+              <input
+                id='date'
+                name='date'
+                type='date'
+                />
             </div>
           </div>
           <div className='priceInput'>
             <div className='label_total flex'>
-              <label htmlFor='price'>
-                Max price:
-              </label>
-              <h3 className='total'>$5000</h3>
+              <label htmlFor='price'>Max price:</label>
+              <h3 className='total'>{price}$</h3>
             </div>
             <div className='input flex'>
-              <input type="range" max='5000' min='1000'/>
+              <input
+                id='price'
+                name='price'
+                type='range'
+                min='400'
+                max='5000'
+                value={price}
+                onChange={handlePriceChange}
+              />
             </div>
           </div>
 
-          <div className="searchOptions flex">
-            <HiFilter className='icon'/>
+          <button onClick={handleFilterClick} className='searchOptions flex'>
+            <HiFilter className='icon' />
             <p>MORE FILTERS</p>
-          </div>
+          </button>
         </div>
-        <div data-aos='fade-up' className="homeFooterIcons flex">
+        <div data-aos='fade-up' className='homeFooterIcons flex'>
           <div className='rightIcons'>
-            <FiFacebook className='icon'/>
-            <AiOutlineInstagram className='icon'/>
-            <FaTripadvisor className='icon'/>
+            <a href="/"><FiFacebook className='icon' /></a>
+            <a href="/"><AiOutlineInstagram className='icon' /></a>
+            <a href="/"><FaTripadvisor className='icon' /></a>
           </div>
           <div className='leftIcons'>
-            <BsListTask className='icon'/>
-            <TbApps className='icon'/>
+            <a href="/"><BsListTask className='icon' /></a>
+            <a href="/"><TbApps className='icon' /></a>
           </div>
         </div>
       </div>
     </section>
-   );
-}
- 
+  );
+};
+
 export default Home;

@@ -56,14 +56,21 @@
   background: var(--white-color);
   border-radius: 1rem;
   gap: 1rem;
+  color: var(--text-color);
+}
+.home .cardDiv label {
+  display: inline-block;
+  padding-bottom: 0.2rem;
 }
 .home .cardDiv .label_total {
+  align-items: center;
+  text-align: center;
   justify-content: space-between;
+  color: var(--text-color);
 }
 .home .cardDiv .label_total .total {
   color: var(--text-color);
   font-size: 18px;
-  padding-bottom: 1rem;
 }
 .home .input {
   height: 40px;
@@ -129,4 +136,56 @@
 }
 .home .homeFooterIcons .icon:hover {
   color: var(--primary-color);
+}
+
+@media screen and (min-width: 500px) {
+  .home .homeContent .textDiv .smallText {
+    font-size: 16px;
+  }
+  .home .homeContent .textDiv .homeTitle {
+    position: relative;
+    font-size: 2.3rem;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .home .homeContent .textDiv .homeTitle::after {
+    position: absolute;
+    content: "";
+    background: var(--secondary-color);
+    height: 5px;
+    width: 145px;
+    right: 0px;
+    bottom: 5px;
+    z-index: -1;
+  }
+  .home .homeContent .cardDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 710px) {
+  .home .homeContent .cardDiv {
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 940px) {
+  .home {
+    height: 85vh;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .home {
+    height: 95vh;
+  }
+  .home .cardDiv {
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home .cardDiv .input {
+    margin-bottom: 1rem;
+  }
+  .home .cardDiv .searchOptions {
+    bottom: -1rem;
+    padding: 8px 1rem;
+  }
 }/*# sourceMappingURL=home.css.map */
