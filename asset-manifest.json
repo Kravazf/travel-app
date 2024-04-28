@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/travel-app/static/css/main.5f00c66c.css",
+    "main.js": "/travel-app/static/js/main.0df0e5d5.js",
+    "static/media/video3.mp4": "/travel-app/static/media/video3.23c9c8f5d8e4c0d42fd9.mp4",
+    "static/media/video_yaht_small.mp4": "/travel-app/static/media/video_yaht_small.bb9ced1bb519783b651f.mp4",
+    "static/media/cappadocia.png": "/travel-app/static/media/cappadocia.b26ea423e03d13611de9.png",
+    "static/media/boraBora.png": "/travel-app/static/media/boraBora.0fae203972cfe3982b0b.png",
+    "static/media/mexico.jpg": "/travel-app/static/media/mexico.60baafbb3315e9810d81.jpg",
+    "static/media/ancorWat.jpg": "/travel-app/static/media/ancorWat.a53332096258233f5031.jpg",
+    "static/media/tajMahal.webp": "/travel-app/static/media/tajMahal.ba05313001615ee69d1a.webp",
+    "static/media/greatBarrierReef.webp": "/travel-app/static/media/greatBarrierReef.3a593973ca9bdd73a5c3.webp",
+    "static/media/cinqueTerre.jpg": "/travel-app/static/media/cinqueTerre.9ac1ad113a1fa13e58a7.jpg",
+    "static/media/bali.jpg": "/travel-app/static/media/bali.5d50e5b85803792cb2a5.jpg",
+    "static/media/machuPicchu.webp": "/travel-app/static/media/machuPicchu.c962fb6a69e075e00e89.webp",
+    "index.html": "/travel-app/index.html",
+    "main.5f00c66c.css.map": "/travel-app/static/css/main.5f00c66c.css.map",
+    "main.0df0e5d5.js.map": "/travel-app/static/js/main.0df0e5d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f00c66c.css",
+    "static/js/main.0df0e5d5.js"
+  ]
+}
