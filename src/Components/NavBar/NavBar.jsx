@@ -13,7 +13,6 @@ const NavBar = () => {
   }
 
   //Function to remove navBar
-
   const removeNavbar = () => {
     setActive('navBar');
   }
@@ -22,7 +21,7 @@ const NavBar = () => {
     <section className='NavBarSection'>
       <header className='header flex'>
         <div className='logoDiv'>
-          <a href='/' className='logo flex'>
+          <a href='#' className='logo flex'>
             <h1>
               <MdOutlineTravelExplore className='icon'/>
               Travel.
