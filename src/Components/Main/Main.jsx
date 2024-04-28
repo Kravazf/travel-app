@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './main.css';
 import { HiOutlineClipboardCheck, HiOutlineLocationMarker } from 'react-icons/hi';
 import AOS from 'aos';
@@ -10,6 +10,12 @@ const Main = ({ filteredData }) => {
     AOS.init({ duration: 1700 });
   }, []);
 
+  const [expandedItem, setExpandedItem] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpandedItem(index === expandedItem ? null : index);
+  };
+
   return (
     <section className='main container section'>
       <div className="secTitle">
@@ -18,8 +24,11 @@ const Main = ({ filteredData }) => {
         </h3>
       </div>
       <div className="secContent grid">
-        {filteredData.map((item) => (
-          <div data-aos='fade-up' key={item.destTitle} className="singleDestination">
+        {filteredData.map((item, index) => (
+          <div
+            data-aos='fade-up'
+            key={item.destTitle}
+            className="singleDestination">
             <div className='imageDiv'>
               <img src={item.ImgSrc} alt={item.destTitle} />
             </div>
@@ -42,9 +51,13 @@ const Main = ({ filteredData }) => {
                 </div>
               </div>
               <div className='desc'>
-                <TruncatedParagraph text={item.description} maxLength={100}/>
+                {expandedItem === index ? (
+                  <p>{item.description}</p>
+                ) : (
+                  <TruncatedParagraph text={item.description} maxLength={100}/>
+                )}
               </div>
-              <button className="btn flex">
+              <button className="btn flex" onClick={() => toggleExpand(index)}>
                 DETAILS <HiOutlineClipboardCheck className='icon'/>
               </button>
             </div>

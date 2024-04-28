@@ -29,13 +29,14 @@
     position: relative;
 
     .singleDestination {
-      height: 100%;
+      min-height: 100%;
       display: grid;
       row-gap: 10px;
       border-radius: 10px;
       background: var(--card-BG);
       box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
       overflow: hidden;
+      transition: height 0.3s ease;
 
       &:hover {
         background: var(--card-hover);
