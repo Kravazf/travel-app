@@ -25,7 +25,7 @@ const Home = ({ onPriceFilter }) => {
   };
 
   const handleDestinationChange = (event) => {
-    setDestination(event.target.value); // Оновлюємо стан при зміні значення
+    setDestination(event.target.value);
   };
 
   const handleFilterClick = () => {
@@ -95,13 +95,13 @@ const Home = ({ onPriceFilter }) => {
         </div>
         <div data-aos='fade-up' className='homeFooterIcons flex'>
           <div className='rightIcons'>
-            <a href="/"><FiFacebook className='icon' /></a>
-            <a href="/"><AiOutlineInstagram className='icon' /></a>
-            <a href="/"><FaTripadvisor className='icon' /></a>
+            <a href="#"><FiFacebook className='icon' /></a>
+            <a href="#"><AiOutlineInstagram className='icon' /></a>
+            <a href="#"><FaTripadvisor className='icon' /></a>
           </div>
           <div className='leftIcons'>
-            <a href="/"><BsListTask className='icon' /></a>
-            <a href="/"><TbApps className='icon' /></a>
+            <a href="#"><BsListTask className='icon' /></a>
+            <a href="#"><TbApps className='icon' /></a>
           </div>
         </div>
       </div>
